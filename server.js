@@ -8,7 +8,13 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://hms-frontend-three-beta.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true 
+}));
+
+
 app.use(express.json()); 
 
 // Routes
@@ -22,6 +28,7 @@ app.use('/api/er', require('./routes/emergency.routes'));
 app.use('/api/maintenance', require('./routes/maintenance.routes'));
 app.use('/api/hr', require('./routes/hr.routes'));
 app.use('/api/feedback', require('./routes/feedback.routes'));
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
