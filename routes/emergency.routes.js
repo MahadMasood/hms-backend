@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const EmergencyVisit = require('../models/EmergencyVisit');
-const { protect } = require('../middleware/authMiddleware');
+const protect = require('../middleware/authMiddleware');
 
 // @desc    Register new ER Patient (Triage Nurse)
 // @route   POST /api/er/triage

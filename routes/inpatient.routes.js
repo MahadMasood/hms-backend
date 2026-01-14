@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Bed = require('../models/Bed');
 const Admission = require('../models/Admission');
-const { protect } = require('../middleware/authMiddleware');
+const protect = require('../middleware/authMiddleware');
 
 
 // @desc    Get all ACTIVE admissions 

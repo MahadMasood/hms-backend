@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Staff = require('../models/Staff');
-const { protect } = require('../middleware/authMiddleware');
+const protect = require('../middleware/authMiddleware');
 
 // @desc    Onboard new Staff 
 // @route   POST /api/hr/staff

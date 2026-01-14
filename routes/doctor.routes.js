@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Doctor = require("../models/Doctor");
-const { protect } = require("../middleware/authMiddleware");
+const protect = require("../middleware/authMiddleware");
 // @route   POST /api/doctors
 // @desc    Add a new doctor
 router.post("/", protect, async (req, res) => {

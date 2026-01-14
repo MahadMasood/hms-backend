@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const MaintenanceTicket = require('../models/MaintenanceTicket');
 const Bed = require('../models/Bed'); 
-const { protect } = require('../middleware/authMiddleware');
+const protect = require('../middleware/authMiddleware');
 
 // @desc    Create a ticket
 // @route   POST /api/maintenance

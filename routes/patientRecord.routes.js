@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { protect } = require("../middleware/authMiddleware");
+const protect = require("../middleware/authMiddleware");
 const Prescription = require("../models/Prescription");
 const Report = require("../models/Report");
 const Invoice = require("../models/Invoice");
